@@ -54,9 +54,9 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Calendar" Click="IconButtonCalendar_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Add Agenda" Click="IconButtonAddAgenda_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Setting" Click="IconButtonSetting_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/res/icon/appbar.add.rest.png" Text="Add Agenda" Click="IconButtonAddAgenda_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/res/icon/appbar.view.calendar.png" Text="Calendar" Click="IconButtonCalendar_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/res/icon/appbar.feature.settings.rest.png" Text="Setting" Click="IconButtonSetting_Click"/>
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="City Event" Click="BarMenuItemEvents_Click" />
                 <shell:ApplicationBarMenuItem Text="Headline" Click="BarMenuItemHeadline_Click"/>
