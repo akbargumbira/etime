@@ -13,7 +13,7 @@ namespace eTime
 {
     public class Global
     {
-        public static SettingModel SETTING;
-        public static Agendas AGENDAS;
+        public static SettingModel SETTING = new SettingModel();
+        public static Agendas AGENDAS = new Agendas();
     }
 }
