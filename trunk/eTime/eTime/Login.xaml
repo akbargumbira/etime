@@ -33,7 +33,7 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,181,0,0" Name="textBlockPassword" Text="password" VerticalAlignment="Top" />
             <PasswordBox Height="72" HorizontalAlignment="Left" Margin="0,203,0,0" Name="passwordBox" VerticalAlignment="Top" Width="460" />
             <TextBlock Height="56" HorizontalAlignment="Left" Margin="12,6,0,0" Text="Facebook Account" VerticalAlignment="Top" FontSize="40"/>
-            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="296,300,0,0" Name="buttonLogin" VerticalAlignment="Top" Width="160" />
+            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="296,300,0,0" Name="buttonLogin" VerticalAlignment="Top" Width="160" Click="buttonLogin_Click" />
         </Grid>
     </Grid>
  

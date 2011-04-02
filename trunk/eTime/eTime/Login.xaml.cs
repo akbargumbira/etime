@@ -19,5 +19,10 @@ namespace eTime
         {
             InitializeComponent();
         }
+
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+        }
     }
 }

@@ -19,5 +19,15 @@ namespace eTime
         {
             InitializeComponent();
         }
+
+        private void BarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AddAgenda.xaml", UriKind.Relative));
+        }
+
+        private void Date_Click(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }

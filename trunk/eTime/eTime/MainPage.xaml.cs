@@ -20,5 +20,30 @@ namespace eTime
         {
             InitializeComponent();
         }
+
+        private void IconButtonCalendar_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Calendar.xaml", UriKind.Relative));
+        }
+
+        private void IconButtonAddAgenda_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AddAgenda.xaml", UriKind.Relative));
+        }
+
+        private void IconButtonSetting_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Setting.xaml", UriKind.Relative));
+        }
+
+        private void BarMenuItemEvents_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Events.xaml", UriKind.Relative));
+        }
+
+        private void BarMenuItemHeadline_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Headlines.xaml", UriKind.Relative));
+        }
     }
 }

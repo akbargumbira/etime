@@ -56,7 +56,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 
-                <TextBlock>1</TextBlock>
+                <TextBlock MouseLeftButtonDown="Date_Click">1</TextBlock>
                 <TextBlock Grid.Column="1">2</TextBlock>
                 <TextBlock Grid.Column="2">3</TextBlock>
                 <TextBlock Grid.Column="3">4</TextBlock>
@@ -102,7 +102,7 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Add Agenda"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Add Agenda" Click="BarIconButton_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 
