@@ -28,40 +28,34 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel>
+            <ScrollViewer>
                 <StackPanel>
-                    <TextBlock Height="100">
-                       Event description 
-                    </TextBlock>
-                    <Button HorizontalAlignment="Right" Width="200" Height="70">
-                        Attend Event
-                    </Button>
+                    <StackPanel>
+                        <TextBlock Height="100">
+                           Event description 
+                        </TextBlock>
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Height="100">
+                           Event description
+                        </TextBlock>
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Height="100">
+                           Event description
+                        </TextBlock>
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Height="100">
+                           Event description
+                        </TextBlock>
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel>
-                    <TextBlock Height="100">
-                       Event description
-                    </TextBlock>
-                    <Button HorizontalAlignment="Right" Width="200" Height="70">
-                        Attend Event
-                    </Button>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Height="100">
-                       Event description
-                    </TextBlock>
-                    <Button HorizontalAlignment="Right" Width="200" Height="70">
-                        Attend Event
-                    </Button>
-                </StackPanel>
-                <StackPanel>
-                    <TextBlock Height="100">
-                       Event description
-                    </TextBlock>
-                    <Button HorizontalAlignment="Right" Width="200" Height="70">
-                        Attend Event
-                    </Button>
-                </StackPanel>
-            </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
  

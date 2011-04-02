@@ -28,15 +28,17 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <StackPanel>
-                <TextBlock Height="100">Headline 1</TextBlock>
-                <TextBlock Height="100">Headline 2</TextBlock>
-                <TextBlock Height="100">Headline 3</TextBlock>
-                <TextBlock Height="100">Headline 4</TextBlock>
-                <TextBlock Height="100">Headline 5</TextBlock>
-                <TextBlock Height="100">Headline 6</TextBlock>
-                <TextBlock Height="100">Headline 7</TextBlock>
-            </StackPanel>
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock Height="100">Headline 1</TextBlock>
+                    <TextBlock Height="100">Headline 2</TextBlock>
+                    <TextBlock Height="100">Headline 3</TextBlock>
+                    <TextBlock Height="100">Headline 4</TextBlock>
+                    <TextBlock Height="100">Headline 5</TextBlock>
+                    <TextBlock Height="100">Headline 6</TextBlock>
+                    <TextBlock Height="100">Headline 7</TextBlock>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
  

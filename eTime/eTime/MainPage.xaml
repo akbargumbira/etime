@@ -54,12 +54,12 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Calendar"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Add Agenda"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Setting"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Calendar" Click="IconButtonCalendar_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Add Agenda" Click="IconButtonAddAgenda_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Setting" Click="IconButtonSetting_Click"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="City Event"/>
-                <shell:ApplicationBarMenuItem Text="Headline"/>
+                <shell:ApplicationBarMenuItem Text="City Event" Click="BarMenuItemEvents_Click" />
+                <shell:ApplicationBarMenuItem Text="Headline" Click="BarMenuItemHeadline_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
