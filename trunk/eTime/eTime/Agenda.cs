@@ -27,20 +27,33 @@ namespace eTime
             set { description = value; }
         }
 
-        private DateTime start;
-        public DateTime Start
+        private DateTime startDate;
+        public DateTime StartDate
         {
-            get { return start; }
-            set { start = value; }
+            get { return startDate; }
+            set { startDate = value; }
         }
 
-        private DateTime end;
-        public DateTime End
+        private DateTime startTime;
+        public DateTime StartTime
         {
-            get { return end; }
-            set { end = value; }
+            get { return startTime; }
+            set { startTime = value; }
         }
 
+        private DateTime endDate;
+        public DateTime EndDate
+        {
+            get { return endDate; }
+            set { endDate = value; }
+        }
+
+        private DateTime endTime;
+        public DateTime EndTime
+        {
+            get { return endTime; }
+            set { endTime = value; }
+        }
         private string location;
         public string Location
         {
