@@ -31,26 +31,26 @@
             <ScrollViewer>
                 <StackPanel>
                     <StackPanel>
-                        <TextBlock Height="100">
-                           Event description 
+                        <TextBlock Height="110" x:Name="text1">
+                            
                         </TextBlock>
                         <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Height="100">
-                           Event description
+                        <TextBlock Height="110" x:Name="text2">
+                           
                         </TextBlock>
                         <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Height="100">
-                           Event description
+                        <TextBlock Height="110" x:Name="text3">
+                           
                         </TextBlock>
                         <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Height="100">
-                           Event description
+                        <TextBlock Height="110" x:Name="text4">
+                           
                         </TextBlock>
                         <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
                     </StackPanel>

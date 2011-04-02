@@ -30,13 +30,13 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer>
                 <StackPanel>
-                    <TextBlock Height="100">Headline 1</TextBlock>
-                    <TextBlock Height="100">Headline 2</TextBlock>
-                    <TextBlock Height="100">Headline 3</TextBlock>
-                    <TextBlock Height="100">Headline 4</TextBlock>
-                    <TextBlock Height="100">Headline 5</TextBlock>
-                    <TextBlock Height="100">Headline 6</TextBlock>
-                    <TextBlock Height="100">Headline 7</TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text1"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text2"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text3"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text4"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text5"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text6"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text7"></TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
