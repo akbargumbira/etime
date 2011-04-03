@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:e="clr-namespace:eTime"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -27,9 +28,7 @@
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="Auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
@@ -80,15 +79,38 @@
                     </Grid>    
                 </Border>
             </Grid>
-            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="1" Background="{StaticResource PhoneChromeBrush}">
-            	<TextBlock Margin="0,0,-2,-10"><Run Text="Current Agenda"/></TextBlock>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FFED3FDF">
-            	<TextBlock Foreground="White" Margin="0,0,-2,-10"><Run Text="Next Agenda"/></TextBlock>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="3" Background="#FF3C3C41">
-            	<TextBlock Margin="0,0,-2,-10"><Run Text="Next Agenda"/></TextBlock>
-            </Border>
+
+            <ScrollViewer  Grid.Row="2">
+                <Grid>
+                    <StackPanel>
+                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="0" Background="{StaticResource PhoneChromeBrush}">
+                            <StackPanel>
+                                <TextBlock Name="current"><Run Text="Current Agenda"/></TextBlock>
+                                <e:EventView  Margin="0, 5, 0, 0" />
+                            </StackPanel>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="1" Background="#FFED3FDF">
+                            
+                            <StackPanel>
+                                <TextBlock Name="next"><Run Text="Next Agenda"/></TextBlock>
+                                <e:EventView Margin="0, 5, 0, 0" />
+                            </StackPanel>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FF3C3C41">
+                            <StackPanel>
+                                <TextBlock Name="next2"><Run Text="Next Agenda"/></TextBlock>
+                                <e:EventView  Margin="0, 5, 0, 0" Background="#FFED3FDF" />
+                            </StackPanel>
+                        </Border>
+                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FF3C3C41">
+                            <StackPanel>
+                                <TextBlock Name="next3"><Run Text="Next Agenda"/></TextBlock>
+                                <e:EventView  Margin="0, 5, 0, 0" Background="#FFED3FDF" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
         </Grid>
     </Grid>
  
