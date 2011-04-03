@@ -45,10 +45,10 @@
                 <RowDefinition Height="65*" />
             </Grid.RowDefinitions>
 
-            <TextBlock>Title</TextBlock>
+            <TextBlock FontSize="30">Title</TextBlock>
             <TextBox Grid.Column="1" Name="textBoxTitle"></TextBox>
 
-            <TextBlock Grid.Row="1">Description</TextBlock>
+            <TextBlock Grid.Row="1" FontSize="30">Description</TextBlock>
             <TextBox Grid.Row="1" Grid.Column="1" Name="textBoxDesc"></TextBox>
 
             <toolkit:DatePicker Header="Date" Name="selectStartDate"  ValueStringFormat="{}{0:D}" Margin="0,1,6,58" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" />
@@ -57,9 +57,9 @@
             <toolkit:DatePicker Header="Date" Name="selectEndDate"  ValueStringFormat="{}{0:D}" Margin="0,0,6,0" Grid.Column="1" Grid.Row="4" />
             <toolkit:TimePicker x:Name="EventTimePickerEnd"  Grid.Column="1" Margin="0,89,161,34" Grid.Row="4" Grid.RowSpan="3" />
 
-            <TextBlock Grid.Row="2">Start</TextBlock>
-            <TextBlock Grid.Row="4">End</TextBlock>
-            <TextBlock Grid.Row="6">Location</TextBlock>
+            <TextBlock Grid.Row="2" FontSize="30">Start</TextBlock>
+            <TextBlock Grid.Row="4" FontSize="30">End</TextBlock>
+            <TextBlock Grid.Row="6" FontSize="30">Location</TextBlock>
             <TextBox Grid.Row="6" Grid.Column="1" Name="textBoxLocation"></TextBox>
 
             <Button Content="Save" Width="200" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Click="Button_Click" Margin="0,2,0,-2" />

@@ -8,10 +8,10 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="Auto" d:DesignWidth="480">
-    <Grid x:Name="LayoutRoot">
-        <StackPanel Background="Gray">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+        <StackPanel>
             <TextBlock Name="textBlockTitle" Text="title" FontSize="40"/>
-            <TextBlock Name="textBlockContent" Text="content" TextWrapping="Wrap" />
+            <TextBlock Name="textBlockContent" Text="content" FontSize="30" TextWrapping="Wrap" />
         </StackPanel>
     </Grid>
 </UserControl>

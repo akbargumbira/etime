@@ -26,20 +26,20 @@
             </Grid.ColumnDefinitions>
 
 
-            <TextBlock Text="Title" />
-            <TextBlock Grid.Column="2" Name="textBlockTitle" />
+            <TextBlock Text="Title" FontSize="30" />
+            <TextBlock Grid.Column="2" Name="textBlockTitle" FontSize="30" />
 
-            <TextBlock Grid.Row="1" Text="Description" />
-            <TextBlock Grid.Row="1" Grid.Column="2" Name="textBlockDesc"     Text="" />
+            <TextBlock Grid.Row="1" Text="Description" FontSize="30" />
+            <TextBlock Grid.Row="1" Grid.Column="2" Name="textBlockDesc"     Text="" FontSize="30" />
 
-            <TextBlock Grid.Row="2" Text="Start" />
-            <TextBlock Grid.Row="2" Grid.Column="2" Name="textBlockStart"    Text="" />
+            <TextBlock Grid.Row="2" Text="Start" FontSize="30" />
+            <TextBlock Grid.Row="2" Grid.Column="2" Name="textBlockStart"    Text="" FontSize="30" />
 
-            <TextBlock Grid.Row="3" Text="End" />
-            <TextBlock Grid.Row="3" Grid.Column="2" Name="textBlockEnd"      Text="" />
+            <TextBlock Grid.Row="3" Text="End" FontSize="30" />
+            <TextBlock Grid.Row="3" Grid.Column="2" Name="textBlockEnd"      Text=""  FontSize="30" />
 
-            <TextBlock Grid.Row="4" Text="Location" />
-            <TextBlock Grid.Row="4" Grid.Column="2" Name="textBlockLocation" Text="" />
+            <TextBlock Grid.Row="4" Text="Location" FontSize="30" />
+            <TextBlock Grid.Row="4" Grid.Column="2" Name="textBlockLocation" Text="" FontSize="30" />
         </Grid>
     </Grid>
 </UserControl>
