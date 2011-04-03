@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:e="clr-namespace:eTime"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -29,54 +30,8 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer>
-                <StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="title" />
-                        <TextBlock Text="Desc" />
-                        <TextBlock Text="Start" />
-                        <TextBlock Text="End" />
-                        <TextBlock Text="Location" />
-                    </StackPanel>
-                    <StackPanel Height="2" Background="Gray" Margin="0,5">
-                        <Line />
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="title" />
-                        <TextBlock Text="Desc" />
-                        <TextBlock Text="Start" />
-                        <TextBlock Text="End" />
-                        <TextBlock Text="Location" />
-                    </StackPanel>
-                    <StackPanel Height="2" Background="Gray" Margin="0,5">
-                        <Line />
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="title" />
-                        <TextBlock Text="Desc" />
-                        <TextBlock Text="Start" />
-                        <TextBlock Text="End" />
-                        <TextBlock Text="Location" />
-                    </StackPanel>
-                    <StackPanel Height="2" Background="Gray" Margin="0,5">
-                        <Line />
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="title" />
-                        <TextBlock Text="Desc" />
-                        <TextBlock Text="Start" />
-                        <TextBlock Text="End" />
-                        <TextBlock Text="Location" />
-                    </StackPanel>
-                    <StackPanel Height="2" Background="Gray" Margin="0,5">
-                        <Line />
-                    </StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="title" />
-                        <TextBlock Text="Desc" />
-                        <TextBlock Text="Start" />
-                        <TextBlock Text="End" />
-                        <TextBlock Text="Location" />
-                    </StackPanel>
+                <StackPanel Name="stackPanelAgendas">
+                                        
                 </StackPanel>
             </ScrollViewer>
         </Grid>
