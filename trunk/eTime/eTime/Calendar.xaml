@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:t="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -23,45 +24,31 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="eTime" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="calendar" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="40" />
+                </Grid.ColumnDefinitions>
+                <TextBlock  Style="{StaticResource PhoneTextNormalStyle}" Text="&lt;" TextAlignment="Center" Name="textBlockPrevYear" MouseLeftButtonUp="textBlockPrevYear_MouseLeftButtonUp" />
+                <TextBlock  Style="{StaticResource PhoneTextNormalStyle}" Margin="20, 0" Grid.Column="1" Name="textBlockYear" TextAlignment="Center">Year</TextBlock>
+                <TextBlock  Style="{StaticResource PhoneTextNormalStyle}" Grid.Column="2" TextAlignment="Center" Text="&gt;" Name="textBlockNextYear" MouseLeftButtonUp="textBlockNextYear_MouseLeftButtonUp"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Grid.Column="0" Text="&lt;" TextAlignment="Center" Name="textBlockPrevMonth" MouseLeftButtonUp="textBlockPrevMonth_MouseLeftButtonUp" />
+                <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Grid.Column="1" Margin="20, 0" Name="textBlockMonth" TextAlignment="Center" >Month</TextBlock>
+                <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Grid.Column="2" TextAlignment="Center" Text="&gt;" Name="textBlockNextMonth" MouseLeftButtonUp="textBlockNextMonth_MouseLeftButtonUp" />
+            </Grid>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="0" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition Width="40" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="40" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="1" Text="&lt;" FontSize="30" TextAlignment="Center" Name="textBlockPrevYear" MouseLeftButtonUp="textBlockPrevYear_MouseLeftButtonUp" />
-                <TextBlock Margin="20, 0" Grid.Column="2" Name="textBlockYear" TextAlignment="Center" FontSize="30">Year</TextBlock>
-                <TextBlock Grid.Column="3" TextAlignment="Center" Text="&gt;" FontSize="30" Name="textBlockNextYear" MouseLeftButtonUp="textBlockNextYear_MouseLeftButtonUp"/>
-            </Grid>
-            
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition Width="40" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="40" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="1" Text="&lt;" FontSize="30" TextAlignment="Center" Name="textBlockPrevMonth" MouseLeftButtonUp="textBlockPrevMonth_MouseLeftButtonUp" />
-                    <TextBlock Grid.Column="2" Margin="20, 0" Name="textBlockMonth" TextAlignment="Center" FontSize="30">Month</TextBlock>
-                    <TextBlock Grid.Column="3" TextAlignment="Center" Text="&gt;" FontSize="30" Name="textBlockNextMonth" MouseLeftButtonUp="textBlockNextMonth_MouseLeftButtonUp" />
-            </Grid>
-
-            <Grid Name="gridCalendar" Width="440" Height="440" Grid.Row="3">
+            <Grid Name="gridCalendar" Height="450" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
