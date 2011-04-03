@@ -29,8 +29,22 @@ namespace eTime
         public string Location
         {
             get { return textBlockLocation.Text; }
-            set { textBlockLocation.Text = value; }
+            set { textBlockLocation.Text = "di " + value; }
         }
+
+        public string Start
+        {
+            get { return textBlockStart.Text; }
+            set { textBlockStart.Text = "mulai " + value; }
+        }
+
+        public string End
+        {
+            get { return textBlockEnd.Text; }
+            set { textBlockEnd.Text = "sampai " + value; }
+        }
+
+        public int ID;
 
         public EventView()
         {

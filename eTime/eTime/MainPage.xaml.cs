@@ -40,36 +40,43 @@ namespace eTime
             
         }
 
+        void eventview_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            EventView eventview = (EventView)sender;
+            NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id=" + eventview.ID.ToString(), UriKind.Relative));
+        }
+
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             // Dapat data dari parameter
-            string day = "";
-            string month = "";
-            string year = "";
-            NavigationContext.QueryString.TryGetValue("day", out day);
-            NavigationContext.QueryString.TryGetValue("month", out month);
-            NavigationContext.QueryString.TryGetValue("year", out year);
+
+            EventViewContainer.Children.Clear();
 
             // data dari Global.Agendas diiterasi terus crate object Agenda
-            AgendasModel result = Global.AGENDAS.Find(Convert.ToInt32(day), Convert.ToInt32(month), Convert.ToInt32(year));
+            AgendasModel result = Global.AGENDAS.Find(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+
+            if (result.Count < 1)
+            {
+
+            }
+
             for (int i = 0; i < result.Count; ++i)
             {
-                Agenda agenda = new Agenda();
+                EventView eventview= new EventView();
                 // Add Content
-                agenda.Title = result[i].Title;
-                agenda.Description = result[i].Description;
-                agenda.Start = result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
-                agenda.End = result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
-                agenda.Location = result[i].Location;
+                eventview.Title = result[i].Title;
+                eventview.Description = result[i].Description;
+                eventview.Location = result[i].Location;
+                eventview.ID = result[i].ID;
 
                 // Add event handler
-                //agenda.MouseLeftButtonUp += new MouseButtonEventHandler(agenda_MouseLeftButtonUp);
+                eventview.MouseLeftButtonUp += new MouseButtonEventHandler(eventview_MouseLeftButtonUp);
 
                 // Set margin
-                agenda.Margin = new Thickness(0, 0, 0, 10);
-                //stackPanelAgendas.Children.Add(agenda);
+                eventview.Margin = new Thickness(0, 0, 0, 10);
+                EventViewContainer.Children.Add(eventview);
             }
         }
 

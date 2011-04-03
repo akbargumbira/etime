@@ -81,35 +81,15 @@
             </Grid>
 
             <ScrollViewer  Grid.Row="2">
-                <Grid>
-                    <StackPanel>
-                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="0" Background="{StaticResource PhoneChromeBrush}">
-                            <StackPanel>
-                                <TextBlock Name="current"><Run Text="Current Agenda"/></TextBlock>
-                                <e:EventView  Margin="0, 5, 0, 0" />
-                            </StackPanel>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="1" Background="#FFED3FDF">
-                            
-                            <StackPanel>
-                                <TextBlock Name="next"><Run Text="Next Agenda"/></TextBlock>
-                                <e:EventView Margin="0, 5, 0, 0" />
-                            </StackPanel>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FF3C3C41">
-                            <StackPanel>
-                                <TextBlock Name="next2"><Run Text="Next Agenda"/></TextBlock>
-                                <e:EventView  Margin="0, 5, 0, 0" Background="#FFED3FDF" />
-                            </StackPanel>
-                        </Border>
-                        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FF3C3C41">
-                            <StackPanel>
-                                <TextBlock Name="next3"><Run Text="Next Agenda"/></TextBlock>
-                                <e:EventView  Margin="0, 5, 0, 0" Background="#FFED3FDF" />
-                            </StackPanel>
-                        </Border>
+                <StackPanel>
+                    <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Background="#FF656565">
+                        <StackPanel>
+                            <TextBlock Name="current"><Run Text="Today's Agenda" FontSize="30"/></TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Name="EventViewContainer">                                                
                     </StackPanel>
-                </Grid>
+                </StackPanel>
             </ScrollViewer>
         </Grid>
     </Grid>
