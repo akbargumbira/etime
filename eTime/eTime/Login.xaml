@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -27,13 +27,16 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="12,71,0,506" Name="textBlockEmail" Text="email" />
-            <TextBox Height="72" HorizontalAlignment="Left" Margin="0,93,0,0" Name="textBoxEmail" Text="" VerticalAlignment="Top" Width="460" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,181,0,0" Name="textBlockPassword" Text="password" VerticalAlignment="Top" />
-            <PasswordBox Height="72" HorizontalAlignment="Left" Margin="0,203,0,0" Name="passwordBox" VerticalAlignment="Top" Width="460" />
-            <TextBlock Height="56" HorizontalAlignment="Left" Margin="12,6,0,0" Text="Facebook Account" VerticalAlignment="Top" FontSize="40"/>
-            <Button Content="Login" Height="72" HorizontalAlignment="Left" Margin="296,300,0,0" Name="buttonLogin" VerticalAlignment="Top" Width="160" Click="buttonLogin_Click" />
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">                      
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <phone:WebBrowser x:Name="wbLogin" IsScriptEnabled="True" LoadCompleted="wbLogin_LoadCompleted" />
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="txtStatus" Text="Loading login page" Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Height="80" TextWrapping="Wrap" x:Name="txtError" Text="Ok" Style="{StaticResource PhoneTextAccentStyle}"/>
+            </StackPanel>
         </Grid>
     </Grid>
  
