@@ -67,7 +67,6 @@ namespace eTime
                 EventView eventview= new EventView();
                 // Add Content
                 eventview.Title = result[i].Title;
-                eventview.Description = result[i].Description;
                 eventview.Location = result[i].Location;
                 eventview.ID = result[i].ID;
 
