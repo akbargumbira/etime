@@ -28,7 +28,7 @@ namespace eTime
         int month;
         int year;
         List<TextBlock> textBlockDates;
-
+        
         public Calendar()
         {
             InitializeComponent();
@@ -109,8 +109,11 @@ namespace eTime
             // Border brush
             Brush brush = new SolidColorBrush(Colors.White);
 
-            // Border thickness
-            Thickness thickness = new Thickness(1);
+            // Border thicknessBorder
+            Thickness thicknessBorder = new Thickness(1);
+
+            // Margin thicknessMargin
+            Thickness thicknessMargin = new Thickness(2, 0, 0, 0);
 
             // Create grid element
             for (i = 0; i < 7; ++i)
@@ -136,10 +139,6 @@ namespace eTime
                         tb.Text = DAYS[j];
                     }
 
-                    // Set aligment
-                    tb.VerticalAlignment = System.Windows.VerticalAlignment.Center;
-                    tb.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-
                     // Add to border
                     border.Child = tb;
                     
@@ -148,11 +147,18 @@ namespace eTime
 
                     if (i > 0)
                     {
-                        // Set Font size
-                        tb.FontSize = 30;
+                        // Set aligment
+                        tb.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+                        tb.VerticalAlignment = System.Windows.VerticalAlignment.Bottom;
 
-                        // Set border thickness
-                        border.BorderThickness = thickness;
+                        // Set Margin
+                        tb.Margin = thicknessMargin;
+
+                        // Add Event Handler
+                        tb.MouseLeftButtonUp += new MouseButtonEventHandler(tb_MouseLeftButtonUp);
+
+                        // Set border thicknessBorder
+                        border.BorderThickness = thicknessBorder;
 
                         // Add To list;
                         textBlockDates.Add(tb);
@@ -169,14 +175,16 @@ namespace eTime
             RenderCalendar();
         }
 
+        void tb_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock tb = (TextBlock)sender;
+            string uri = "/AgendaList.xaml?day=" + tb.Text + "&month=" + month + "&year=" + year;
+            NavigationService.Navigate(new Uri(uri, UriKind.Relative));
+        }
+
         private void BarIconButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AddAgenda.xaml", UriKind.Relative));
-        }
-
-        private void Date_Click(object sender, MouseButtonEventArgs e)
-        {
-
         }
 
         private void textBlockPrevYear_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
