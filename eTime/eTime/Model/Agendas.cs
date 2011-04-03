@@ -46,6 +46,15 @@ namespace eTime
             return null;
         }
 
+        public bool Remove(int id)
+        {
+            // Find
+            AgendaModel agenda = Find(id);
+
+            // Remove
+            return this.Remove(agenda);
+        }
+
         public void Save()
         {
             IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForApplication();
