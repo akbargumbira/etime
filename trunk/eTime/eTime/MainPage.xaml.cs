@@ -19,8 +19,22 @@ namespace eTime
         public MainPage()
         {
             InitializeComponent();
-            date.Text = DateTime.Now.Date.ToString();
+            String a = DateTime.Now.Date.ToLongDateString();
+            int cut = 0;
+            if (a == "Sunday" || a == "Monday" || a == "Friday")
+            {
+                cut = 6;
+            }
+            else if (a == "Tuesday")
+            {
+                cut = 7;
+            }
+            else
+            {
+                cut = 8;
+            }
             day.Text = DateTime.Now.DayOfWeek.ToString().Substring(0,3);
+            date.Text = DateTime.Now.Date.ToLongDateString().Substring(cut);
         }
 
         private void IconButtonCalendar_Click(object sender, EventArgs e)
