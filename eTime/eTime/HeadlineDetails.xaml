@@ -27,9 +27,17 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel>
+
+                    <TextBlock TextWrapping="Wrap" x:Name="text1"></TextBlock>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
     </Grid>
- 
+
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
