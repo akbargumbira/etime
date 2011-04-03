@@ -12,10 +12,10 @@
     <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
         <StackPanel>
             <TextBlock Name="textBlockTitle" Text="title" />
-            <TextBlock Text="Desc" />
-            <TextBlock Text="Start" />
-            <TextBlock Text="End" />
-            <TextBlock Text="Location" />
+            <TextBlock Name="textBlockDesc" Text="Desc" />
+            <TextBlock Name="textBlockStart" Text="Start" />
+            <TextBlock Name="textBlockEnd" Text="End" />
+            <TextBlock Name="textBlockLocation" Text="Location" />
         </StackPanel>
     </Grid>
 </UserControl>

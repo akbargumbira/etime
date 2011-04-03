@@ -13,7 +13,19 @@ using System.Collections.Generic;
 namespace eTime
 {
     public class AgendasModel : List<AgendaModel>
-    { 
+    {
+        public AgendasModel Find(int day, int month, int year)
+        {
+            AgendasModel result = new AgendasModel();
+            for (int i = 0; i < Global.AGENDAS.Count; ++i)
+            {
+                if ((Global.AGENDAS[i].StartTime.Day == day) && (Global.AGENDAS[i].StartTime.Month == month) && (Global.AGENDAS[i].StartTime.Year== year))
+                {
+                    result.Add(Global.AGENDAS[i]);
+                }
+            }
 
+            return result;
+        }
     }
 }

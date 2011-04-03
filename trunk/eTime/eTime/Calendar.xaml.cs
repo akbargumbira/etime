@@ -178,7 +178,7 @@ namespace eTime
         void tb_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             TextBlock tb = (TextBlock)sender;
-            string uri = "/AgendaList.xaml?day=" + tb.Text + "&month=" + month + "&year=" + year;
+            string uri = "/AgendaList.xaml?day=" + tb.Text + "&month=" + (month + 1) + "&year=" + year;
             NavigationService.Navigate(new Uri(uri, UriKind.Relative));
         }
 

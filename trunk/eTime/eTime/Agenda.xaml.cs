@@ -20,6 +20,30 @@ namespace eTime
             set { textBlockTitle.Text = value; }
         }
 
+        public string Description
+        {
+            get { return textBlockDesc.Text; }
+            set { textBlockDesc.Text = value; }
+        }
+
+        public string Start
+        {
+            get { return textBlockStart.Text; }
+            set { textBlockStart.Text = value; }
+        }
+
+        public string End
+        {
+            get { return textBlockEnd.Text; }
+            set { textBlockEnd.Text = value; }
+        }
+
+        public string Location
+        {
+            get { return textBlockLocation.Text; }
+            set { textBlockLocation.Text = value; }
+        }
+
         public Agenda()
         {
             InitializeComponent();
