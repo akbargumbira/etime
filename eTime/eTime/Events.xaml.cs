@@ -134,10 +134,10 @@ namespace eTime
         {
             string title = "FRANCHISE & BUSINESS CONCEPT EXPO 2011";
             string description = "Pameran konsep bisnis dan info franchise.";
-            DateTime startDate = new DateTime(2011, 4, 11);
-            DateTime startTime = new DateTime(2011, 4, 11, 9, 0, 0);
-            DateTime endDate = new DateTime(2011, 4, 17);
-            DateTime endTime = new DateTime(2011, 4, 17, 15, 0, 0);
+            DateTime startDate = new DateTime(2011, 4, 8);
+            DateTime startTime = new DateTime(2011, 4, 8, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 10);
+            DateTime endTime = new DateTime(2011, 4, 10, 15, 0, 0);
             string location = "Graha Manggala Siliwangi, Jl Aceh 66 Bandung";
             if ((title == "") || (description == "") || (location == ""))
             {
@@ -166,10 +166,10 @@ namespace eTime
         {
             string title = "Pekan Kebudayaan Melayu ITB 2011";
             string description = "Mengenal lebih dalam kebudayaan Melayu Indonesia.";
-            DateTime startDate = new DateTime(2011, 4, 8);
-            DateTime startTime = new DateTime(2011, 4, 8, 9, 0, 0);
-            DateTime endDate = new DateTime(2011, 4, 10);
-            DateTime endTime = new DateTime(2011, 4, 10, 15, 0, 0);
+            DateTime startDate = new DateTime(2011, 4, 11);
+            DateTime startTime = new DateTime(2011, 4, 11, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 17);
+            DateTime endTime = new DateTime(2011, 4, 17, 15, 0, 0);
             string location = "Kampus ITB dan SABUGA, Jl. Tamansari";
             if ((title == "") || (description == "") || (location == ""))
             {
