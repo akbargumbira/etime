@@ -35,7 +35,7 @@ namespace eTime
             }
             else
             {
-                Agenda input = new Agenda();
+                AgendaModel input = new AgendaModel();
                 input.Title = title;
                 input.Description = description;
                 input.StartDate = startDate;

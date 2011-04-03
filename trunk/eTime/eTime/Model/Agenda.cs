@@ -11,7 +11,7 @@ using System.Windows.Shapes;
 
 namespace eTime
 {
-    public class Agenda
+    public class AgendaModel
     {
         private string title;
         public string Title
@@ -61,7 +61,7 @@ namespace eTime
             set { location = value; }
         }
 
-        public Agenda()
+        public AgendaModel()
         {
         }
     }

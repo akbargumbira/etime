@@ -8,12 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
 
 namespace eTime
 {
-    public class Global
-    {
-        public static SettingModel SETTING = new SettingModel();
-        public static Agendas AGENDAS = new Agendas();
+    public class AgendasModel : List<AgendaModel>
+    { 
+
     }
 }
