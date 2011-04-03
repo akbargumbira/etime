@@ -202,6 +202,8 @@
     <Content Include="res\icon\appbar.view.calendar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <Resource Include="res\weather\00.png" />
     <Resource Include="res\weather\01.png" />
     <Resource Include="res\weather\02.png" />
