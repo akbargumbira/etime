@@ -17,6 +17,10 @@ namespace eTime
 {
     public partial class App : Application
     {
+        //Variable Global
+        public static string judul;
+        public static string isi;
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

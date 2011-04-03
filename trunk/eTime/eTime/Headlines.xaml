@@ -30,13 +30,14 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer>
                 <StackPanel>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text1"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text2"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text3"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text4"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text5"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text6"></TextBlock>
-                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text7"></TextBlock>
+                    
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text1" MouseLeftButtonUp="text1_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text2" MouseLeftButtonUp="text2_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text3" MouseLeftButtonUp="text3_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text4" MouseLeftButtonUp="text4_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text5" MouseLeftButtonUp="text5_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text6" MouseLeftButtonUp="text6_MouseLeftButtonUp"></TextBlock>
+                    <TextBlock Height="150" TextWrapping="Wrap" x:Name="text7" MouseLeftButtonUp="text7_MouseLeftButtonUp"></TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </Grid>

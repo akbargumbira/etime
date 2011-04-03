@@ -106,8 +106,26 @@ namespace eTime
             DateTime endDate = new DateTime(2011, 4, 3);
             DateTime endTime = new DateTime(2011, 4, 3, 15, 0, 0);
             string location = "GOR Pajajaran Bandung, Jl. Pajajaran Bandung";
+            if ((title == "") || (description == "") || (location == ""))
+            {
+                MessageBox.Show("You haven't fill title or description or location");
+            }
+            else
+            {
+                AgendaModel input = new AgendaModel();
+                input.ID = Global.AGENDAS.Count;
+                input.Title = title;
+                input.Description = description;
+                input.StartDate = startDate;
+                input.StartTime = startTime;
+                input.EndDate = endDate;
+                input.EndTime = endTime;
+                input.Location = location;
 
-            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+                Global.AGENDAS.Add(input);
+                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+
+            }
 
             
         }
@@ -121,9 +139,26 @@ namespace eTime
             DateTime endDate = new DateTime(2011, 4, 17);
             DateTime endTime = new DateTime(2011, 4, 17, 15, 0, 0);
             string location = "Graha Manggala Siliwangi, Jl Aceh 66 Bandung";
+            if ((title == "") || (description == "") || (location == ""))
+            {
+                MessageBox.Show("You haven't fill title or description or location");
+            }
+            else
+            {
+                AgendaModel input = new AgendaModel();
+                input.ID = Global.AGENDAS.Count;
+                input.Title = title;
+                input.Description = description;
+                input.StartDate = startDate;
+                input.StartTime = startTime;
+                input.EndDate = endDate;
+                input.EndTime = endTime;
+                input.Location = location;
 
-            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+                Global.AGENDAS.Add(input);
+                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
 
+            }
             
         }
 
@@ -136,9 +171,26 @@ namespace eTime
             DateTime endDate = new DateTime(2011, 4, 10);
             DateTime endTime = new DateTime(2011, 4, 10, 15, 0, 0);
             string location = "Kampus ITB dan SABUGA, Jl. Tamansari";
+            if ((title == "") || (description == "") || (location == ""))
+            {
+                MessageBox.Show("You haven't fill title or description or location");
+            }
+            else
+            {
+                AgendaModel input = new AgendaModel();
+                input.ID = Global.AGENDAS.Count;
+                input.Title = title;
+                input.Description = description;
+                input.StartDate = startDate;
+                input.StartTime = startTime;
+                input.EndDate = endDate;
+                input.EndTime = endTime;
+                input.Location = location;
 
-            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+                Global.AGENDAS.Add(input);
+                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
 
+            }
             
         }
 
@@ -151,9 +203,26 @@ namespace eTime
             DateTime endDate = new DateTime(2011, 4, 14);
             DateTime endTime = new DateTime(2011, 4, 10, 18, 0, 0);
             string location = "Gedung Landmark, Jl. Braga No. 129 Bandung";
+            if ((title == "") || (description == "") || (location == ""))
+            {
+                MessageBox.Show("You haven't fill title or description or location");
+            }
+            else
+            {
+                AgendaModel input = new AgendaModel();
+                input.ID = Global.AGENDAS.Count;
+                input.Title = title;
+                input.Description = description;
+                input.StartDate = startDate;
+                input.StartTime = startTime;
+                input.EndDate = endDate;
+                input.EndTime = endTime;
+                input.Location = location;
 
-            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+                Global.AGENDAS.Add(input);
+                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
 
+            }
             
         }
     }
