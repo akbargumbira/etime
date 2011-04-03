@@ -70,7 +70,7 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Edit"/>
+            <shell:ApplicationBarIconButton x:Name="btnEdit" IconUri="/Images/appbar_button1.png" Text="Edit"/>
             <shell:ApplicationBarIconButton x:Name="btnDelete" IconUri="/Images/appbar_button2.png" Text="Delete" Click="btnDelete_Click"/>
             <shell:ApplicationBarIconButton x:Name="btnShare" IconUri="/Images/appbar_button2.png" Text="Share" Click="btnShare_Click"/>
         </shell:ApplicationBar>

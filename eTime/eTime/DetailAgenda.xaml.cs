@@ -18,7 +18,8 @@ namespace eTime
     {
         private WebClient m_wcPostMessage;
         private HelperClasses.FBWallPost m_fbPost;
-
+        private string ID = "";
+            
         public DetailAgenda()
         {
             InitializeComponent();
@@ -82,7 +83,6 @@ namespace eTime
             base.OnNavigatedTo(e);
 
             // Dapat data dari parameter
-            string ID = "";
             NavigationContext.QueryString.TryGetValue("id", out ID);
             
             // data dari Global.Agendas diiterasi terus crate object Agenda
@@ -96,9 +96,14 @@ namespace eTime
             textBlockLocation.Text = thisAgenda.Location;
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        { 
+            NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id="+ID, UriKind.Relative));
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = 0;
+            int id = int.Parse(ID);
             Global.AGENDAS.RemoveAt(id);
         }
 
