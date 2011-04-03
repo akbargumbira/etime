@@ -44,6 +44,8 @@ namespace eTime
             set { textBlockLocation.Text = value; }
         }
 
+        public int ID;
+        
         public Agenda()
         {
             InitializeComponent();

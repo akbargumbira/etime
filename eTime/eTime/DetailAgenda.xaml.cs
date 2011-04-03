@@ -77,5 +77,35 @@ namespace eTime
             //txtError.Text = strError;
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Dapat data dari parameter
+            string ID = "";
+            NavigationContext.QueryString.TryGetValue("id", out ID);
+            
+            // data dari Global.Agendas diiterasi terus crate object Agenda
+            AgendasModel result = Global.AGENDAS.Find(Convert.ToInt32(day), Convert.ToInt32(month), Convert.ToInt32(year));
+            for (int i = 0; i < result.Count; ++i)
+            {
+                Agenda agenda = new Agenda();
+                // Add Content
+                agenda.ID = result[i].ID;
+                agenda.Title = "Title\t: " + result[i].Title;
+                agenda.Description = "Desc\t: " + result[i].Description;
+                agenda.Start = "Start\t: " + result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
+                agenda.End = "End\t: " + result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
+                agenda.Location = "Location\t: " + result[i].Location;
+
+                // Add event handler
+                agenda.MouseLeftButtonUp += new MouseButtonEventHandler(agenda_MouseLeftButtonUp);
+
+                // Set margin
+                agenda.Margin = new Thickness(0, 0, 0, 10);
+                stackPanelAgendas.Children.Add(agenda);
+            }
+        }
+
     }
 }

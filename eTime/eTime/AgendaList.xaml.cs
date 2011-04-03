@@ -23,7 +23,7 @@ namespace eTime
         void agenda_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Agenda agenda = (Agenda)sender;
-            NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id=0", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id="+agenda.ID.ToString(), UriKind.Relative));
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -47,11 +47,12 @@ namespace eTime
             {
                 Agenda agenda = new Agenda();
                 // Add Content
-                agenda.Title = result[i].Title;
-                agenda.Description = result[i].Description;
-                agenda.Start = result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
-                agenda.End = result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
-                agenda.Location = result[i].Location;
+                agenda.ID = result[i].ID;
+                agenda.Title ="Title\t: "+ result[i].Title;
+                agenda.Description = "Desc\t: " + result[i].Description;
+                agenda.Start = "Start\t: " + result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
+                agenda.End = "End\t: " + result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
+                agenda.Location = "Location\t: " + result[i].Location;
 
                 // Add event handler
                 agenda.MouseLeftButtonUp += new MouseButtonEventHandler(agenda_MouseLeftButtonUp);
