@@ -31,36 +31,53 @@ namespace eTime.HelperClasses
                 ThePictureLink = "http://games.pp-p.net/Badges/RedAE.png";
             }
         }
+        public FBWallPost(string strCaption, string strDescription, string strMessage, string strName)
+        {
+            //TheCaption = strCaption;
+            //TheDescription = strDescription;
+            //TheLink = "http://www.facebook.com/apps/application.php?id=177698508943902";
+            //TheLink = "http://iphone.pp-p.net";
+            TheMessage = strMessage;
+            //TheName = strName;
+            //ThePictureLink = "http://www.facebook.com/apps/application.php?id=177698508943902";
+
+            //ThePictureLink = "http://games.pp-p.net/Badges/RedAE.png";
+        }
+
+        public FBWallPost(string strMessage)
+        {
+            TheMessage = strMessage;
+        }
 
         public string GetPostParameters(string strAccessToken)
         {
             try
             {
                 string strRet = "access_token=" + strAccessToken;
-                if (!string.IsNullOrEmpty(TheCaption))
-                {
-                    strRet += "&caption=" + HttpUtility.UrlEncode(TheCaption);
-                }
-                if (!string.IsNullOrEmpty(TheDescription))
-                {
-                    strRet += "&description=" + HttpUtility.UrlEncode(TheDescription);
-                }
-                if (!string.IsNullOrEmpty(TheLink))
-                {
-                    strRet += "&link=" + HttpUtility.UrlEncode(TheLink);
-                }
+                //if (!string.IsNullOrEmpty(TheCaption))
+                //{
+                //    strRet += "&caption=" + HttpUtility.UrlEncode(TheCaption);
+                //}
+                //if (!string.IsNullOrEmpty(TheDescription))
+                //{
+                //    strRet += "&description=" + HttpUtility.UrlEncode(TheDescription);
+                //}
+                //if (!string.IsNullOrEmpty(TheLink))
+                //{
+                //    strRet += "&link=" + HttpUtility.UrlEncode(TheLink);
+                //}
                 if (!string.IsNullOrEmpty(TheMessage))
                 {
                     strRet += "&message=" + HttpUtility.UrlEncode(TheMessage);
                 }
-                if (!string.IsNullOrEmpty(TheName))
-                {
-                    strRet += "&name=" + HttpUtility.UrlEncode(TheName);
-                }
-                if (!string.IsNullOrEmpty(ThePictureLink))
-                {
-                    strRet += "&picture=" + HttpUtility.UrlEncode(ThePictureLink);
-                }
+                //if (!string.IsNullOrEmpty(TheName))
+                //{
+                //    strRet += "&name=" + HttpUtility.UrlEncode(TheName);
+                //}
+                //if (!string.IsNullOrEmpty(ThePictureLink))
+                //{
+                    //strRet += "&picture=" + HttpUtility.UrlEncode(ThePictureLink);
+                //}
                 return (strRet);
             }
             catch { return (""); }
