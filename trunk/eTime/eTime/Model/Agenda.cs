@@ -13,6 +13,7 @@ namespace eTime
 {
     public class AgendaModel
     {
+        public int ID;
         private string title;
         public string Title
         {
