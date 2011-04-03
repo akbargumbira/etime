@@ -131,5 +131,14 @@ namespace eTime
         }
 
         #endregion
+
+        #region AccessToken
+        private static string m_strAccessToken;
+        public static string AccessToken
+        {
+            get { return m_strAccessToken; }
+            set { m_strAccessToken = value; }
+        }
+        #endregion
     }
 }

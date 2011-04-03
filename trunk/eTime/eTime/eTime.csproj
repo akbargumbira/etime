@@ -91,6 +91,8 @@
     <Compile Include="Headlines.xaml.cs">
       <DependentUpon>Headlines.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HelperClasses\FBUri.cs" />
+    <Compile Include="HelperClasses\FBWallPost.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
