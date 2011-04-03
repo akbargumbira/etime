@@ -29,6 +29,10 @@ namespace eTime
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+
+            // Make empty
+            stackPanelAgendas.Children.Clear();
+
             // Dapat data dari parameter
             string day = "";
             string month = "";
