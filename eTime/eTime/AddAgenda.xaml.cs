@@ -29,10 +29,26 @@ namespace eTime
             DateTime endDate = (DateTime)selectEndDate.Value;
             DateTime endTime = (DateTime)EventTimePickerEnd.Value;
             string location = textBoxLocation.Text;
+            if ((title == "") || (description == "") || (location == ""))
+            {
+                MessageBox.Show("You haven't fill title or description or location");
+            }
+            else
+            {
+                Agenda input = new Agenda();
+                input.Title = title;
+                input.Description = description;
+                input.StartDate = startDate;
+                input.StartTime = startTime;
+                input.EndDate = endDate;
+                input.EndTime = endTime;
+                input.Location = location;
 
-            MessageBox.Show("Event have been added : \nTitle : "+title+"\n"+ "Description : "+description +"\nStart Date : "+startDate+"\n"+"Start Time : "+startTime+"\nEnd Date : "+endDate+"\nEnd Time : "+endTime+"\nLocation : "+location);
+                Global.AGENDAS.Add(input);
+                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
 
-            NavigationService.GoBack();
+                NavigationService.GoBack();
+            }
         }
         
         //Contoh ambil value date ma time picker
