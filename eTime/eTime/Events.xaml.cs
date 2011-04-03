@@ -123,7 +123,7 @@ namespace eTime
                 input.Location = location;
 
                 Global.AGENDAS.Add(input);
-                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+                MessageBox.Show("Event have been added");
 
             }
 
@@ -156,7 +156,7 @@ namespace eTime
                 input.Location = location;
 
                 Global.AGENDAS.Add(input);
-                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+                MessageBox.Show("Event have been added");
 
             }
             
@@ -188,7 +188,7 @@ namespace eTime
                 input.Location = location;
 
                 Global.AGENDAS.Add(input);
-                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+                MessageBox.Show("Event have been added");
 
             }
             
@@ -220,7 +220,7 @@ namespace eTime
                 input.Location = location;
 
                 Global.AGENDAS.Add(input);
-                MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+                MessageBox.Show("Event have been added");
 
             }
             

@@ -42,7 +42,7 @@ namespace eTime
 
         void eventview_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            EventView eventview = (EventView)sender;
+            AgendaView eventview = (AgendaView)sender;
             NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id=" + eventview.ID.ToString(), UriKind.Relative));
         }
 
@@ -64,18 +64,20 @@ namespace eTime
 
             for (int i = 0; i < result.Count; ++i)
             {
-                EventView eventview= new EventView();
+                AgendaView agendaView= new AgendaView();
                 // Add Content
-                eventview.Title = result[i].Title;
-                eventview.Location = result[i].Location;
-                eventview.ID = result[i].ID;
+                agendaView.Title = result[i].Title;
+                agendaView.Location = result[i].Location;
+                agendaView.Start = result[i].StartDate.Date.ToString() + " " + result[i].StartTime.TimeOfDay.ToString();
+                agendaView.End = result[i].EndDate.Date.ToString() + " " + result[i].EndTime.TimeOfDay.ToString();
+                agendaView.ID = result[i].ID;
 
                 // Add event handler
-                eventview.MouseLeftButtonUp += new MouseButtonEventHandler(eventview_MouseLeftButtonUp);
+                agendaView.MouseLeftButtonUp += new MouseButtonEventHandler(eventview_MouseLeftButtonUp);
 
                 // Set margin
-                eventview.Margin = new Thickness(0, 0, 0, 10);
-                EventViewContainer.Children.Add(eventview);
+                agendaView.Margin = new Thickness(0, 0, 0, 10);
+                EventViewContainer.Children.Add(agendaView);
             }
         }
 
