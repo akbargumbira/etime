@@ -19,6 +19,7 @@ namespace eTime
         {
             InitializeComponent();
 
+            //1
             InlineCollection inlines = text1.Inlines;
             Run r = new Run();
             r.Text = "Bandung Soccer Fest 2011";
@@ -37,6 +38,7 @@ namespace eTime
             r.Text = "time: 09.00 WIB, 1 April 2011 - 3 April 2011";
             inlines.Add(r);
 
+            //2
             inlines = text2.Inlines;
             r = new Run();
             r.Text = "FRANCHISE & BUSINESS CONCEPT EXPO 2011";
@@ -55,6 +57,7 @@ namespace eTime
             r.Text = "time: 8 April 2011 - 10 April 2011";
             inlines.Add(r);
 
+            //3
             inlines = text3.Inlines;
             r = new Run();
             r.Text = "Pekan Kebudayaan Melayu ITB 2011";
@@ -73,6 +76,7 @@ namespace eTime
             r.Text = "time: 11 April 2011 - 17 April 2011";
             inlines.Add(r);
 
+            //4
             inlines = text4.Inlines;
             r = new Run();
             r.Text = "Jabar Job Fair 2011";
@@ -90,6 +94,67 @@ namespace eTime
             r = new Run();
             r.Text = "time: 09.00 - 18.00 WIB, 13 April 2011 - 14 April 2011";
             inlines.Add(r);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string title = "Bandung Soccer Fest 2011";
+            string description = "Peringatan HUT PERSIB Bandung.";
+            DateTime startDate = new DateTime(2011, 4, 1);
+            DateTime startTime = new DateTime(2011, 4, 1, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 3);
+            DateTime endTime = new DateTime(2011, 4, 3, 15, 0, 0);
+            string location = "GOR Pajajaran Bandung, Jl. Pajajaran Bandung";
+
+            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string title = "FRANCHISE & BUSINESS CONCEPT EXPO 2011";
+            string description = "Pameran konsep bisnis dan info franchise.";
+            DateTime startDate = new DateTime(2011, 4, 11);
+            DateTime startTime = new DateTime(2011, 4, 11, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 17);
+            DateTime endTime = new DateTime(2011, 4, 17, 15, 0, 0);
+            string location = "Graha Manggala Siliwangi, Jl Aceh 66 Bandung";
+
+            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string title = "Pekan Kebudayaan Melayu ITB 2011";
+            string description = "Mengenal lebih dalam kebudayaan Melayu Indonesia.";
+            DateTime startDate = new DateTime(2011, 4, 8);
+            DateTime startTime = new DateTime(2011, 4, 8, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 10);
+            DateTime endTime = new DateTime(2011, 4, 10, 15, 0, 0);
+            string location = "Kampus ITB dan SABUGA, Jl. Tamansari";
+
+            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+
+            
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            string title = "Jabar Job Fair 2011";
+            string description = "Pameran Bursa Kerja.";
+            DateTime startDate = new DateTime(2011, 4, 13);
+            DateTime startTime = new DateTime(2011, 4, 8, 9, 0, 0);
+            DateTime endDate = new DateTime(2011, 4, 14);
+            DateTime endTime = new DateTime(2011, 4, 10, 18, 0, 0);
+            string location = "Gedung Landmark, Jl. Braga No. 129 Bandung";
+
+            MessageBox.Show("Event have been added : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate + "\n" + "Start Time : " + startTime + "\nEnd Date : " + endDate + "\nEnd Time : " + endTime + "\nLocation : " + location);
+
+            
         }
     }
 }

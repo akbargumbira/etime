@@ -34,25 +34,25 @@
                         <TextBlock Height="110" x:Name="text1">
                             
                         </TextBlock>
-                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" Click="Button_Click" />
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Height="110" x:Name="text2">
                            
                         </TextBlock>
-                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" Click="Button_Click_1" />
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Height="110" x:Name="text3">
                            
                         </TextBlock>
-                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" Click="Button_Click_2" />
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Height="110" x:Name="text4">
                            
                         </TextBlock>
-                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" />
+                        <Button Content="Attend Event" HorizontalAlignment="Right" Width="200" Height="70" Click="Button_Click_3" />
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
