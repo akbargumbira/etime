@@ -44,7 +44,7 @@ namespace eTime
 
         private string CreateMessage()
         {
-            string strMessage = "Saya akan melakukan " + textBlockTitle.Text + " dimulai jam " + textBlockStartTime.Text + " tanggal " + textBlockStartDate.Text + " sampai jam " + textBlockEndTime.Text + " tanggal " + textBlockEndDate.Text + " Di " + textBlockLocation.Text;
+            string strMessage = "I will " + textBlockTitle.Text + " @ " + textBlockLocation.Text + " from" + textBlockStartTime.Text + " " + textBlockStartDate.Text + " until " + textBlockEndTime.Text + " " + textBlockEndDate.Text;
             return strMessage;
         }
 

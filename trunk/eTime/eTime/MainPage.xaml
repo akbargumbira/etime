@@ -69,11 +69,13 @@
                                 <ColumnDefinition Width="120*" />
                             </Grid.ColumnDefinitions>
                             <TextBlock Name="day" TextWrapping="Wrap" FontSize="60" Margin="0,18,0,-18"><Run Text="08"/></TextBlock>
-                            <Grid Grid.Column="1" Margin="0,0,-2,0">
-                                    <TextBlock Margin="49,3,1,-3"><Run Text="65" FontSize="63" /></TextBlock>
-                                    <TextBlock Margin="65,70,6,6" FontSize="20" TextWrapping="Wrap"><Run Text="uark"/></TextBlock>
-                                    <TextBlock HorizontalAlignment="Right" Width="80" Margin="0,-29,45,10"><Run Text="q" FontSize="95" /></TextBlock>
-                            </Grid>
+                            <Border Margin="5,0,0,0" Grid.Column="1" BorderThickness="2" BorderBrush="#FFB7ABAB">
+                                <Grid>
+                                    <TextBlock Margin="54,19,7,-2"><Run Text="65" FontSize="50" /></TextBlock>
+                                    <TextBlock Margin="60,73,3,6" FontSize="20" TextWrapping="Wrap"><Run Text="uark"/></TextBlock>
+                                    <TextBlock HorizontalAlignment="Left" Width="80" Margin="5,-29,45,10"><Run Text="q" FontSize="95" /></TextBlock>
+                                </Grid>
+                            </Border>
                         </Grid>
                         <TextBlock Grid.Row="1" Name="date" FontSize="28" HorizontalAlignment="Right" Width="216"><Run Text="" /></TextBlock>
                     </Grid>    
@@ -82,12 +84,8 @@
 
             <ScrollViewer  Grid.Row="2">
                 <StackPanel>
-                    <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Background="#FF656565">
-                        <StackPanel>
-                            <TextBlock Name="current"><Run Text="Today's Agenda" FontSize="30"/></TextBlock>
-                        </StackPanel>
-                    </Border>
-                    <StackPanel Name="EventViewContainer">                                                
+                    <StackPanel Name="EventViewContainer">
+                        
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>

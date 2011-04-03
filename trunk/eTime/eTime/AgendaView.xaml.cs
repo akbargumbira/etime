@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 
 namespace eTime
 {
-    public partial class EventView : UserControl
+    public partial class AgendaView : UserControl
     {
         public string Title
         {
@@ -20,29 +20,37 @@ namespace eTime
             set { textBlockTitle.Text = value; }
         }
 
+        private string location;
         public string Location
         {
-            get { return textBlockLocation.Text; }
-            set { textBlockLocation.Text = "di " + value; }
+            get { return location; }
+            set { location = value; Render(); }
         }
 
+        private string start;
         public string Start
         {
-            get { return textBlockStart.Text; }
-            set { textBlockStart.Text = "mulai " + value; }
+            get { return start; }
+            set { start = value; Render(); }
         }
 
+        private string end;
         public string End
         {
-            get { return textBlockEnd.Text; }
-            set { textBlockEnd.Text = "sampai " + value; }
+            get { return end; }
+            set { end = value; Render(); }
         }
 
         public int ID;
 
-        public EventView()
+        public AgendaView()
         {
             InitializeComponent();
+        }
+
+        public void Render()
+        {
+            textBlockContent.Text = "@" + location + " from " + start + " until " + end + ".";
         }
     }
 }
