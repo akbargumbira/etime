@@ -43,7 +43,7 @@ namespace eTime
 
         private string CreateMessage()
         {
-            string strMessage = "Saya akan melakukan " + txtBlockTitle.Text + " dimulai jam " + txtBlockStartTime.Text + " tanggal " + txtBlockStartDate.Text + " sampai jam " + txtBlockEndTime.Text + " tanggal " + txtBlockEndDate.Text + " Di " + txtBlockLocation.Text;
+            string strMessage = "Saya akan melakukan " + textBlockTitle.Text + " dimulai jam " + textBlockStartTime.Text + " tanggal " + textBlockStartDate.Text + " sampai jam " + textBlockEndTime.Text + " tanggal " + textBlockEndDate.Text + " Di " + textBlockLocation.Text;
             return strMessage;
         }
 
@@ -86,25 +86,14 @@ namespace eTime
             NavigationContext.QueryString.TryGetValue("id", out ID);
             
             // data dari Global.Agendas diiterasi terus crate object Agenda
-            AgendasModel result = Global.AGENDAS.Find(Convert.ToInt32(day), Convert.ToInt32(month), Convert.ToInt32(year));
-            for (int i = 0; i < result.Count; ++i)
-            {
-                Agenda agenda = new Agenda();
-                // Add Content
-                agenda.ID = result[i].ID;
-                agenda.Title = "Title\t: " + result[i].Title;
-                agenda.Description = "Desc\t: " + result[i].Description;
-                agenda.Start = "Start\t: " + result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
-                agenda.End = "End\t: " + result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
-                agenda.Location = "Location\t: " + result[i].Location;
-
-                // Add event handler
-                agenda.MouseLeftButtonUp += new MouseButtonEventHandler(agenda_MouseLeftButtonUp);
-
-                // Set margin
-                agenda.Margin = new Thickness(0, 0, 0, 10);
-                stackPanelAgendas.Children.Add(agenda);
-            }
+            AgendaModel thisAgenda = Global.AGENDAS[Convert.ToInt32(ID)];
+            textBlockTitle.Text = thisAgenda.Title;
+            textBlockDesc.Text = thisAgenda.Description;
+            textBlockStartDate.Text = thisAgenda.StartDate.ToShortDateString();
+            textBlockStartTime.Text = thisAgenda.StartTime.ToShortTimeString();
+            textBlockEndDate.Text = thisAgenda.EndDate.ToShortDateString();
+            textBlockEndTime.Text = thisAgenda.EndTime.ToShortTimeString();
+            textBlockLocation.Text = thisAgenda.Location;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
