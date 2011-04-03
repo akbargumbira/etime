@@ -7,15 +7,39 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="Auto" d:DesignWidth="480">
+    d:DesignHeight="200" d:DesignWidth="480">
     
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
-        <StackPanel>
-            <TextBlock Name="textBlockTitle"    Text="" />
-            <TextBlock Name="textBlockDesc"     Text="" />
-            <TextBlock Name="textBlockStart"    Text="" />
-            <TextBlock Name="textBlockEnd"      Text="" />
-            <TextBlock Name="textBlockLocation" Text="" />
-        </StackPanel>
+    <Grid Height="Auto" x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+        <Grid Height="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+
+            <TextBlock Text="Title" />
+            <TextBlock Grid.Column="2" Name="textBlockTitle" />
+
+            <TextBlock Grid.Row="1" Text="Description" />
+            <TextBlock Grid.Row="1" Grid.Column="2" Name="textBlockDesc"     Text="" />
+
+            <TextBlock Grid.Row="2" Text="Start" />
+            <TextBlock Grid.Row="2" Grid.Column="2" Name="textBlockStart"    Text="" />
+
+            <TextBlock Grid.Row="3" Text="End" />
+            <TextBlock Grid.Row="3" Grid.Column="2" Name="textBlockEnd"      Text="" />
+
+            <TextBlock Grid.Row="4" Text="Location" />
+            <TextBlock Grid.Row="4" Grid.Column="2" Name="textBlockLocation" Text="" />
+        </Grid>
     </Grid>
 </UserControl>

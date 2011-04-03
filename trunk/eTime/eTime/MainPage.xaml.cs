@@ -35,9 +35,17 @@ namespace eTime
             }
             day.Text = DateTime.Now.DayOfWeek.ToString().Substring(0,3);
             date.Text = DateTime.Now.Date.ToLongDateString().Substring(cut);
+<<<<<<< .mine
+
+            // Open Serialization
+            //Global.AGENDAS = AgendasModel.Load();
+            //Global globalData = Global.Load();
+            //globalData = Global.Load();
+=======
 
             AgendasModel current = Global.AGENDAS.Find(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
             
+>>>>>>> .r31
         }
 
         void eventview_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -103,5 +111,11 @@ namespace eTime
         {
             NavigationService.Navigate(new Uri("/Headlines.xaml", UriKind.Relative));
         }
+
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+        }
+
+        
     }
 }

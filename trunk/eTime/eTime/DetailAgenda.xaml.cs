@@ -74,8 +74,7 @@ namespace eTime
 
         private void UpdateUIStatus(string strStatus, string strError)
         {
-            txtStatus.Text = strStatus;
-            //txtError.Text = strError;
+            MessageBox.Show(strStatus);
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -98,13 +97,16 @@ namespace eTime
 
         private void btnEdit_Click(object sender, EventArgs e)
         { 
-            NavigationService.Navigate(new Uri("/DetailAgenda.xaml?id="+ID, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/EditAgenda.xaml?id="+ID, UriKind.Relative));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int id = int.Parse(ID);
             Global.AGENDAS.RemoveAt(id);
+
+            // Go back
+            NavigationService.GoBack();
         }
 
     }
