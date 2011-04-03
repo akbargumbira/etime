@@ -31,18 +31,14 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <StackPanel>
-                    <TextBlock>Sound</TextBlock>
-                    <toolkit:ListPicker>
-                        <toolkit:ListPickerItem>Sound 1</toolkit:ListPickerItem>
-                        <toolkit:ListPickerItem>Sound 2</toolkit:ListPickerItem>
-                    </toolkit:ListPicker>
+                    <TextBlock FontSize="40">Sound</TextBlock>
+                    <RadioButton GroupName="Sound" Content="Sound 1" />
+                    <RadioButton GroupName="Sound" Content="Sound 2" />
                 </StackPanel>
-                <StackPanel>
-                    <TextBlock Grid.Row="1">Week Start</TextBlock>
-                    <toolkit:ListPicker>
-                        <toolkit:ListPickerItem>Sunday</toolkit:ListPickerItem>
-                        <toolkit:ListPickerItem>Monday</toolkit:ListPickerItem>
-                    </toolkit:ListPicker>
+                <StackPanel Margin="0,20,0,0">
+                    <TextBlock FontSize="40"  Grid.Row="1">Week Start</TextBlock>
+                    <RadioButton GroupName="WeekStart" Content="Sunday" />
+                    <RadioButton GroupName="WeekStart" Content="Monday" />
                 </StackPanel>
             </StackPanel>
         </Grid>

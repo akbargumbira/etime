@@ -50,7 +50,7 @@ namespace eTime
 
         public void Render()
         {
-            textBlockContent.Text = "@" + location + " from " + start + " until " + end + ".";
+            textBlockContent.Text = "from " + start + "\nuntil " + end + "\nat " + location + ".";
         }
     }
 }

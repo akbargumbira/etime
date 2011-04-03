@@ -64,7 +64,7 @@ namespace eTime
             }
             try
             {
-                UpdateUIStatus("Berhasil Posting ke Wall", e.Result);
+                UpdateUIStatus("Success post to wall", e.Result);
             }
             catch (Exception eX)
             {

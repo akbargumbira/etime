@@ -65,11 +65,13 @@ namespace eTime
             for (int i = 0; i < result.Count; ++i)
             {
                 AgendaView agendaView= new AgendaView();
+                TextBlock text = new TextBlock();
+                text.Text = "Next Agenda";
                 // Add Content
                 agendaView.Title = result[i].Title;
                 agendaView.Location = result[i].Location;
-                agendaView.Start = result[i].StartDate.Date.ToString() + " " + result[i].StartTime.TimeOfDay.ToString();
-                agendaView.End = result[i].EndDate.Date.ToString() + " " + result[i].EndTime.TimeOfDay.ToString();
+                agendaView.Start = result[i].StartTime.ToShortTimeString();
+                agendaView.End = result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
                 agendaView.ID = result[i].ID;
 
                 // Add event handler
@@ -77,6 +79,8 @@ namespace eTime
 
                 // Set margin
                 agendaView.Margin = new Thickness(0, 0, 0, 10);
+
+                // Add
                 EventViewContainer.Children.Add(agendaView);
             }
         }

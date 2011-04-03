@@ -82,8 +82,22 @@ namespace eTime
             while (tmp.Month <= month + 1 && tmp.Year <= year)
             {
                 tb = textBlockDates[i];
-                tb.Foreground = new SolidColorBrush(Colors.White);
                 tb.Text = tmp.Day.ToString();
+
+                // Set highlight
+                if (Global.AGENDAS.Find(tmp.Day, tmp.Month, tmp.Year).Count > 0)
+                {
+                    tb.FontSize = 40;
+                    tb.FontWeight = FontWeights.Bold;
+                    tb.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    tb.FontSize = 30;
+                    tb.FontWeight = FontWeights.Normal;
+                    tb.Foreground = new SolidColorBrush(Colors.White);
+                }
+
                 tmp = tmp.AddDays(1);
                 ++i;
             }
