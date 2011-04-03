@@ -35,11 +35,11 @@ namespace eTime.HelperClasses
         {
             //TheCaption = strCaption;
             //TheDescription = strDescription;
-            //TheLink = "http://www.facebook.com/apps/application.php?id=177698508943902";
+            //TheLink = "http://www.facebook.com/apps/application.php?strId=177698508943902";
             //TheLink = "http://iphone.pp-p.net";
             TheMessage = strMessage;
             //TheName = strName;
-            //ThePictureLink = "http://www.facebook.com/apps/application.php?id=177698508943902";
+            //ThePictureLink = "http://www.facebook.com/apps/application.php?strId=177698508943902";
 
             //ThePictureLink = "http://games.pp-p.net/Badges/RedAE.png";
         }

@@ -27,5 +27,19 @@ namespace eTime
 
             return result;
         }
+
+        public AgendaModel Find(int id)
+        {
+
+            foreach (AgendaModel model in this)
+            {
+                if (model.ID == id)
+                {
+                    return model;
+                }
+            }
+
+            return null;
+        }
     }
 }
