@@ -107,5 +107,11 @@ namespace eTime
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = 0;
+            Global.AGENDAS.RemoveAt(id);
+        }
+
     }
 }
