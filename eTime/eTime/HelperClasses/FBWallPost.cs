@@ -47,6 +47,7 @@ namespace eTime.HelperClasses
         public FBWallPost(string strMessage)
         {
             TheMessage = strMessage;
+            TheCaption = "eTime for Windows Phone 7";
         }
 
         public string GetPostParameters(string strAccessToken)
@@ -54,10 +55,10 @@ namespace eTime.HelperClasses
             try
             {
                 string strRet = "access_token=" + strAccessToken;
-                //if (!string.IsNullOrEmpty(TheCaption))
-                //{
-                //    strRet += "&caption=" + HttpUtility.UrlEncode(TheCaption);
-                //}
+                if (!string.IsNullOrEmpty(TheCaption))
+                {
+                    strRet += "&caption=" + HttpUtility.UrlEncode(TheCaption);
+                }
                 //if (!string.IsNullOrEmpty(TheDescription))
                 //{
                 //    strRet += "&description=" + HttpUtility.UrlEncode(TheDescription);

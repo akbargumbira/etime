@@ -15,5 +15,6 @@ namespace eTime
     {
         public static SettingModel SETTING = new SettingModel();
         public static AgendasModel AGENDAS = new AgendasModel();
+    
     }
 }

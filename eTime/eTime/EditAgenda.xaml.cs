@@ -75,7 +75,7 @@ namespace eTime
                 agendaModel.Location = location;
 
                 // Show message box
-                MessageBox.Show("Event have been edited : \nTitle : " + title + "\n" + "Description : " + description + "\nStart Date : " + startDate.ToShortDateString() + "\n" + "Start Time : " + startTime.ToShortTimeString() + "\nEnd Date : " + endDate.ToShortDateString() + "\nEnd Time : " + endTime.ToShortTimeString() + "\nLocation : " + location);
+                MessageBox.Show("Agenda have been edited.");
 
                 NavigationService.GoBack();
             }

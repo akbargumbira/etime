@@ -42,17 +42,17 @@ namespace eTime
             NavigationContext.QueryString.TryGetValue("year", out year);
 
             // data dari Global.Agendas diiterasi terus crate object Agenda
-            AgendasModel result =  Global.AGENDAS.Find(Convert.ToInt32(day), Convert.ToInt32(month), Convert.ToInt32(year)); 
+            AgendasModel result =  Global.AGENDAS.Find(int.Parse(day), int.Parse(month), int.Parse(year)); 
             for (int i = 0; i < result.Count; ++i)
             {
                 Agenda agenda = new Agenda();
                 // Add Content
                 agenda.ID = result[i].ID;
-                agenda.Title ="Title\t: "+ result[i].Title;
-                agenda.Description = "Desc\t: " + result[i].Description;
-                agenda.Start = "Start\t: " + result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
-                agenda.End = "End\t: " + result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
-                agenda.Location = "Location\t: " + result[i].Location;
+                agenda.Title = result[i].Title;
+                agenda.Description = result[i].Description;
+                agenda.Start = result[i].StartDate.ToShortDateString() + " " + result[i].StartTime.ToShortTimeString();
+                agenda.End = result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
+                agenda.Location = result[i].Location;
 
                 // Add event handler
                 agenda.MouseLeftButtonUp += new MouseButtonEventHandler(agenda_MouseLeftButtonUp);

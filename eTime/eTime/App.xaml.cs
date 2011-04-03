@@ -60,24 +60,29 @@ namespace eTime
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            // Open Serialization
+            Global.AGENDAS = AgendasModel.Load();
         }
 
         // Code to execute when the application is activated (brought to foreground)
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            Global.AGENDAS = AgendasModel.Load();
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            Global.AGENDAS.Save();
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            Global.AGENDAS.Save();
         }
 
         // Code to execute if a navigation fails
@@ -144,5 +149,8 @@ namespace eTime
             set { m_strAccessToken = value; }
         }
         #endregion
+
+
+        private static Global globalData = new Global();
     }
 }
