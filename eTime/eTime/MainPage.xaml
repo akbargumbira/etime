@@ -39,15 +39,22 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock >Weather</TextBlock>
-                <TextBlock Grid.Column="1">Quark And date</TextBlock>
+                <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,4,8" Background="#FF355DD6">
+                	<TextBlock Foreground="White" Margin="-1,-1,-5,-9" ><Run Text="Weather"/></TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="0" Margin="4,0,0,8" Background="#FF3C3C41" Grid.Column="1">
+                	<TextBlock Margin="-5,-16,0,57" FontSize="48" HorizontalAlignment="Left" Width="84"><Run Text=" "/><Run FontSize="80" Text="Q"/></TextBlock>
+                </Border>
             </Grid>
-
-            <TextBlock Grid.Row="1">Current Agenda</TextBlock>
-
-            <TextBlock Grid.Row="2">Next Agenda</TextBlock>
-
-            <TextBlock Grid.Row="3">Next Agenda</TextBlock>
+            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="1" Background="{StaticResource PhoneChromeBrush}">
+            	<TextBlock Margin="0,0,-2,-10"><Run Text="Current Agenda"/></TextBlock>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="2" Background="#FFED3FDF">
+            	<TextBlock Foreground="White" Margin="0,0,-2,-10"><Run Text="Next Agenda"/></TextBlock>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="3" Background="#FF3C3C41">
+            	<TextBlock Margin="0,0,-2,-10"><Run Text="Next Agenda"/></TextBlock>
+            </Border>
         </Grid>
     </Grid>
  
@@ -58,7 +65,7 @@
             <shell:ApplicationBarIconButton IconUri="/res/icon/appbar.view.calendar.png" Text="Calendar" Click="IconButtonCalendar_Click"/>
             <shell:ApplicationBarIconButton IconUri="/res/icon/appbar.feature.settings.rest.png" Text="Setting" Click="IconButtonSetting_Click"/>
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="City Event" Click="BarMenuItemEvents_Click" />
+                <shell:ApplicationBarMenuItem Text="City Event" Click="BarMenuItemEvents_Click"/>
                 <shell:ApplicationBarMenuItem Text="Headline" Click="BarMenuItemHeadline_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
