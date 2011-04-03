@@ -70,6 +70,9 @@
     <Compile Include="EditAgenda.xaml.cs">
       <DependentUpon>EditAgenda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Agendas.cs" />
     <Compile Include="AgendaList.xaml.cs">
@@ -148,6 +151,10 @@
     <Page Include="Headlines.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
