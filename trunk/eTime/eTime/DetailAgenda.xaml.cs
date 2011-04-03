@@ -85,7 +85,7 @@ namespace eTime
             NavigationContext.QueryString.TryGetValue("id", out ID);
             
             // data dari Global.Agendas diiterasi terus crate object Agenda
-            AgendaModel thisAgenda = Global.AGENDAS[Convert.ToInt32(ID)];
+            AgendaModel thisAgenda = Global.AGENDAS.Find(int.Parse(ID));
             textBlockTitle.Text = thisAgenda.Title;
             textBlockDesc.Text = thisAgenda.Description;
             textBlockStartDate.Text = thisAgenda.StartDate.ToShortDateString();
@@ -103,7 +103,7 @@ namespace eTime
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int id = int.Parse(ID);
-            Global.AGENDAS.RemoveAt(id);
+            Global.AGENDAS.Remove(id);
 
             // Go back
             NavigationService.GoBack();
