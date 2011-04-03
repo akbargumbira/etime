@@ -11,7 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" HorizontalAlignment="Right">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -40,10 +40,44 @@
                 </Grid.ColumnDefinitions>
 
                 <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,4,8" Background="#FF355DD6">
-                	<TextBlock Foreground="White" Margin="-1,-1,-5,-9" ><Run Text="Weather"/></TextBlock>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="114*" />
+                            <RowDefinition Height="32*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.RowSpan="2" Height="120" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="126*" />
+                                <ColumnDefinition Width="96*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="/eTime;component/res/weather/36.png" Height="120" VerticalAlignment="Top" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="6,0,0,0" />
+                            <TextBlock Margin="116,-1,6,38" FontSize="65" TextAlignment="Center" Grid.ColumnSpan="2"><Run Text="23"/></TextBlock>
+                            <TextBlock Grid.Column="1" Margin="67,-1,0,56" FontSize="48" TextAlignment="Center"><Run Text="°"/></TextBlock>
+                            <TextBlock Margin="120,70,-5,13" TextAlignment="Center" FontSize="24" Grid.ColumnSpan="2"><Run Text="Celcius" /></TextBlock>
+                        </Grid>
+                        <TextBlock Margin="1,105,0,-4" FontSize="28" TextAlignment="Right" HorizontalAlignment="Left" Width="218" Grid.RowSpan="2" Text="Loc : Bandung, ID"><Run Text="Bandung, ID"/></TextBlock>
+                    </Grid>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="0" Margin="4,0,0,8" Background="#FF3C3C41" Grid.Column="1">
-                	<TextBlock Margin="-5,-16,0,57" FontSize="48" HorizontalAlignment="Left" Width="84"><Run Text=" "/><Run FontSize="80" Text="Q"/></TextBlock>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="101*" />
+                            <RowDefinition Height="45*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="102*" />
+                                <ColumnDefinition Width="120*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Name="day" TextWrapping="Wrap" Margin="6,5,99,14" FontSize="60" Grid.ColumnSpan="2"><Run Text="08"/></TextBlock>
+                            <Grid Grid.Column="1" Margin="0,0,-2,0">
+                                    <TextBlock Margin="49,3,1,-3"><Run Text="65" FontSize="63" /></TextBlock>
+                                    <TextBlock Margin="65,70,6,6" FontSize="20" TextWrapping="Wrap"><Run Text="uark"/></TextBlock>
+                                    <TextBlock HorizontalAlignment="Right" Width="80" Margin="0,-29,45,10"><Run Text="q" FontSize="95" /></TextBlock>
+                            </Grid>
+                        </Grid>
+                        <TextBlock Grid.Row="1" Name="date" FontSize="28" HorizontalAlignment="Right" Width="109"><Run Text="" /></TextBlock>
+                    </Grid>    
                 </Border>
             </Grid>
             <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,8" Grid.Row="1" Background="{StaticResource PhoneChromeBrush}">

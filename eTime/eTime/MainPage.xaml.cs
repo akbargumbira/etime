@@ -19,6 +19,8 @@ namespace eTime
         public MainPage()
         {
             InitializeComponent();
+            date.Text = DateTime.Now.Date.ToString();
+            day.Text = DateTime.Now.DayOfWeek.ToString().Substring(0,3);
         }
 
         private void IconButtonCalendar_Click(object sender, EventArgs e)
