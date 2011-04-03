@@ -41,7 +41,7 @@ namespace eTime
         }
 
 
-        protected void tes(System.Windows.Navigation.NavigationEventArgs e)
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             // Dapat data dari parameter
