@@ -147,10 +147,6 @@ namespace eTime
 
                     if (i > 0)
                     {
-                        // Set aligment
-                        tb.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
-                        tb.VerticalAlignment = System.Windows.VerticalAlignment.Bottom;
-
                         // Set Margin
                         tb.Margin = thicknessMargin;
 
