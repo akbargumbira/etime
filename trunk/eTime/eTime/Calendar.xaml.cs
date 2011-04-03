@@ -180,9 +180,6 @@ namespace eTime
             now = DateTime.Now;
             month = now.Month - 1;
             year = now.Year;
-
-            // Render Calendar grid
-            RenderCalendar();
         }
 
         void tb_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -238,6 +235,14 @@ namespace eTime
                 // Prev Year
                 DecYear();
             }
+            RenderCalendar();
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Render Calendar grid
             RenderCalendar();
         }
     }
