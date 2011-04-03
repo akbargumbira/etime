@@ -20,12 +20,6 @@ namespace eTime
             set { textBlockTitle.Text = value; }
         }
 
-        public string Description
-        {
-            get { return textBlockDesc.Text; }
-            set { textBlockDesc.Text = value; }
-        }
-
         public string Location
         {
             get { return textBlockLocation.Text; }

@@ -8,7 +8,6 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="Auto" d:DesignWidth="480">
-    
     <Grid x:Name="LayoutRoot">
         <StackPanel Background="Gray">
             <TextBlock Name="textBlockTitle" Text="title" FontSize="30"/>
