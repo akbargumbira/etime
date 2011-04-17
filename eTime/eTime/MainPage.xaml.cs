@@ -114,6 +114,16 @@ namespace eTime
         {
         }
 
+        private void grid_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	Storyboard1.Begin();
+        }
+
+        private void grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Quark.xaml", UriKind.Relative));
+        }
+
         
     }
 }

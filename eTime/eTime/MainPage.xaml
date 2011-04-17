@@ -13,6 +13,37 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True" HorizontalAlignment="Right" BackKeyPress="PhoneApplicationPage_BackKeyPress">
+	<phone:PhoneApplicationPage.Resources>
+		<Storyboard x:Name="Storyboard1">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+	</phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -69,11 +100,11 @@
                                 <ColumnDefinition Width="120*" />
                             </Grid.ColumnDefinitions>
                             <TextBlock Name="day" TextWrapping="Wrap" FontSize="60" Margin="0,18,0,-18"><Run Text="08"/></TextBlock>
-                            <Border Margin="5,0,0,0" Grid.Column="1" BorderThickness="2" BorderBrush="#FFB7ABAB">
-                                <Grid>
-                                    <TextBlock Margin="54,19,7,-2"><Run Text="65" FontSize="50" /></TextBlock>
-                                    <TextBlock Margin="60,73,3,6" FontSize="20" TextWrapping="Wrap"><Run Text="uark"/></TextBlock>
-                                    <TextBlock HorizontalAlignment="Left" Width="80" Margin="5,-29,45,10"><Run Text="q" FontSize="95" /></TextBlock>
+                            <Border Margin="5,0,0,0" Grid.Column="1" BorderThickness="2" BorderBrush="#FFB7ABAB" >
+                                <Grid x:Name="grid" Loaded="grid_Loaded" MouseLeftButtonDown="grid_MouseLeftButtonDown">
+                                    <TextBlock x:Name="textBlock" Margin="54,19,7,-2"><Run Text="65" FontSize="50" /></TextBlock>
+                                    <TextBlock x:Name="textBlock1" Margin="60,73,3,6" FontSize="20" TextWrapping="Wrap"><Run Text="uark"/></TextBlock>
+                                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Width="80" Margin="5,-29,45,10"><Run Text="q" FontSize="95" /></TextBlock>
                                 </Grid>
                             </Border>
                         </Grid>
@@ -85,9 +116,7 @@
             <ScrollViewer  Grid.Row="2">
                 <StackPanel>
                     <TextBlock Text="Today" FontSize="50" Margin="0, 0, 0, 10"/>
-                    <StackPanel Name="EventViewContainer">
-                        
-                    </StackPanel>
+                    <StackPanel Name="EventViewContainer"/>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
