@@ -66,5 +66,24 @@ namespace eTime
         public AgendaModel()
         {
         }
+
+        public bool isAfter(DateTime dt)
+        {
+            int compare = DateTime.Compare(dt, startDate);
+            
+            if (compare > 0)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+
+        public bool isAfter()
+        {
+            return isAfter(DateTime.Now);
+        }
     }
 }

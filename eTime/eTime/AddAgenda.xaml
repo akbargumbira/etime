@@ -15,7 +15,10 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="res/background.jpg" Stretch="Uniform"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -51,10 +54,10 @@
             <TextBlock Grid.Row="1">Description</TextBlock>
             <TextBox Grid.Row="1" Grid.Column="1" Name="textBoxDesc"></TextBox>
             
-            <toolkit:DatePicker Header="Date" Name="selectStartDate"  ValueStringFormat="{}{0:D}" Margin="0,1,6,58" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" />
-            <toolkit:TimePicker x:Name="EventTimePickerStart" Grid.Column="1" Margin="0,86,161,0" Grid.Row="2" Grid.RowSpan="2" />
+            <toolkit:DatePicker Header="Date" Name="selectStartDate"  ValueStringFormat="{}{0:D}" Margin="0,1,6,58" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" ValueChanged="selectStartDate_ValueChanged" />
+            <toolkit:TimePicker x:Name="EventTimePickerStart" Grid.Column="1" Margin="0,86,161,0" Grid.Row="2" Grid.RowSpan="2"  />
 
-            <toolkit:DatePicker Header="Date" Name="selectEndDate"  ValueStringFormat="{}{0:D}" Margin="0,0,6,0" Grid.Column="1" Grid.Row="4" />
+            <toolkit:DatePicker Header="Date" Name="selectEndDate"  ValueStringFormat="{}{0:D}" Margin="0,0,6,0" Grid.Column="1" Grid.Row="4" ValueChanged="selectEndDate_ValueChanged" />
             <toolkit:TimePicker x:Name="EventTimePickerEnd"  Grid.Column="1" Margin="0,89,161,34" Grid.Row="4" Grid.RowSpan="3" />
             
             <TextBlock Grid.Row="2">Start</TextBlock>

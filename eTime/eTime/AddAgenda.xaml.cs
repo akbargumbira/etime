@@ -51,6 +51,22 @@ namespace eTime
                 NavigationService.GoBack();
             }
         }
+
+        private void selectStartDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (DateTime.Compare((DateTime)selectStartDate.Value, (DateTime)selectEndDate.Value) > 0)
+            {
+                selectEndDate.Value = selectStartDate.Value;
+            }
+        }
+
+        private void selectEndDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (DateTime.Compare((DateTime)selectStartDate.Value, (DateTime)selectEndDate.Value) > 0)
+            {
+                selectStartDate.Value = selectEndDate.Value;
+            }
+        }
         
         //Contoh ambil value date ma time picker
         /* private void TimePickerStart_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
