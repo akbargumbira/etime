@@ -22,7 +22,16 @@ namespace eTime
 
         private void buttonLogin_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            string val = "";
+            if (NavigationContext.QueryString.TryGetValue("error", out val))
+            {   
+                NavigationService.GoBack();
+            }
+            else
+            {
+                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            }
+            
         }
 
         private void wbLogin_LoadCompleted(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -50,7 +59,15 @@ namespace eTime
                 App.AccessToken = strPart;
                 txtStatus.Text = "Authenticated - you will redirect to eTime";
                 txtError.Text = "OK";
-                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                string val = "";
+                if (NavigationContext.QueryString.TryGetValue("error", out val))
+                {
+                    NavigationService.GoBack();
+                }
+                else
+                {
+                    NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                }
                 return;
             }
         }

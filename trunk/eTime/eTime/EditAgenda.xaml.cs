@@ -41,11 +41,20 @@ namespace eTime
             // Set to View
             textBoxTitle.Text = agendaModel.Title;
             textBoxDesc.Text = agendaModel.Description;
-            selectStartDate.Value = agendaModel.StartDate;
-            EventTimePickerStart.Value = agendaModel.StartTime;
-            selectEndDate.Value = agendaModel.EndDate;
-            EventTimePickerEnd.Value = agendaModel.EndTime;
+            
             textBoxLocation.Text = agendaModel.Location;
+
+            string value = "";
+            if (NavigationContext.QueryString.TryGetValue("edit", out value))
+            {
+                if (value == "0")
+                {
+                    selectStartDate.Value = agendaModel.StartDate;
+                    EventTimePickerStart.Value = agendaModel.StartTime;
+                    selectEndDate.Value = agendaModel.EndDate;
+                    EventTimePickerEnd.Value = agendaModel.EndTime;
+                }   
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -75,9 +84,25 @@ namespace eTime
                 agendaModel.Location = location;
 
                 // Show message box
-                MessageBox.Show("Agenda have been edited.");
+                MessageBox.Show("Your agenda has been edited.");
 
                 NavigationService.GoBack();
+            }
+        }
+
+        private void selectStartDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (DateTime.Compare((DateTime)selectStartDate.Value, (DateTime)selectEndDate.Value) > 0)
+            {
+                selectEndDate.Value = selectStartDate.Value;
+            }
+        }
+
+        private void selectEndDate_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (DateTime.Compare((DateTime)selectStartDate.Value, (DateTime)selectEndDate.Value) > 0)
+            {
+                selectStartDate.Value = selectEndDate.Value;
             }
         }
     }

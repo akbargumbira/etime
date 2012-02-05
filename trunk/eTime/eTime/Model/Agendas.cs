@@ -33,6 +33,53 @@ namespace eTime
             return result;
         }
 
+        public AgendasModel Find(DateTime dt)
+        {
+            AgendasModel result = new AgendasModel();
+            for (int i = 0; i < Global.AGENDAS.Count; ++i)
+            {
+                if ((Global.AGENDAS[i].StartDate.Day == dt.Day) && (Global.AGENDAS[i].StartDate.Month == dt.Month) && (Global.AGENDAS[i].StartDate.Year == dt.Year))
+                {
+                    result.Add(Global.AGENDAS[i]);
+                }
+            }
+
+            return result;
+        }
+
+        public AgendasModel FindTomorrow(DateTime dt)
+        {
+            AgendasModel result = new AgendasModel();
+
+            dt = dt.AddDays(1);
+            for (int i = 0; i < Global.AGENDAS.Count; ++i)
+            {
+                if ((Global.AGENDAS[i].StartDate.Day == dt.Day) && (Global.AGENDAS[i].StartDate.Month == dt.Month) && (Global.AGENDAS[i].StartDate.Year == dt.Year))
+                {
+                    result.Add(Global.AGENDAS[i]);
+                }
+            }
+
+            return result;
+        }
+
+        
+
+        public AgendasModel getNearestAgenda()
+        {
+            AgendasModel result = new AgendasModel();
+            DateTime dtNow = DateTime.Now;
+            for (int i = 0; i < Global.AGENDAS.Count; ++i)
+            {
+                if (Global.AGENDAS[i].isAfter(dtNow) == true)
+                {
+                    result.Add(Global.AGENDAS[i]);
+                }
+            }
+
+            return result;
+        }
+
         public AgendaModel Find(int id)
         {
             foreach (AgendaModel model in this)
@@ -83,7 +130,6 @@ namespace eTime
             }
             return AgendasData;
         }
-
         
     }
 }

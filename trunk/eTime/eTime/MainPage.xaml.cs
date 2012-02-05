@@ -33,7 +33,7 @@ namespace eTime
             {
                 cut = 8;
             }
-            day.Text = DateTime.Now.DayOfWeek.ToString().Substring(0,3);
+            day.Text = DateTime.Now.DayOfWeek.ToString();
             date.Text = DateTime.Now.Date.ToLongDateString().Substring(cut);
 
             AgendasModel current = Global.AGENDAS.Find(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
@@ -55,11 +55,13 @@ namespace eTime
             EventViewContainer.Children.Clear();
 
             // data dari Global.Agendas diiterasi terus crate object Agenda
-            AgendasModel result = Global.AGENDAS.Find(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+            AgendasModel result = Global.AGENDAS.Find(DateTime.Now);
 
             if (result.Count < 1)
             {
-
+                AgendaView agendaView = new AgendaView();
+                agendaView.Title = "No Event";
+                EventViewContainer.Children.Add(agendaView);
             }
 
             for (int i = 0; i < result.Count; ++i)
@@ -70,7 +72,7 @@ namespace eTime
                 // Add Content
                 agendaView.Title = result[i].Title;
                 agendaView.Location = result[i].Location;
-                agendaView.Start = result[i].StartTime.ToShortTimeString();
+                agendaView.Start = result[i].EndDate.ToShortDateString() + "" + result[i].StartTime.ToShortTimeString();
                 agendaView.End = result[i].EndDate.ToShortDateString() + " " + result[i].EndTime.ToShortTimeString();
                 agendaView.ID = result[i].ID;
 
@@ -82,6 +84,39 @@ namespace eTime
 
                 // Add
                 EventViewContainer.Children.Add(agendaView);
+            }
+
+
+            EventViewContainer2.Children.Clear();
+
+            // data dari Global.Agendas diiterasi terus crate object Agenda
+            AgendasModel resultTomorrow = Global.AGENDAS.FindTomorrow(DateTime.Now);
+
+            if (resultTomorrow.Count < 1)
+            {
+                AgendaView agendaView = new AgendaView();
+                agendaView.Title = "No Event";
+                EventViewContainer2.Children.Add(agendaView);
+            }
+
+            for (int i = 0; i < resultTomorrow.Count; ++i)
+            {
+                AgendaView agendaView = new AgendaView();
+                // Add Content
+                agendaView.Title = resultTomorrow[i].Title;
+                agendaView.Location = resultTomorrow[i].Location;
+                agendaView.Start = resultTomorrow[i].EndDate.ToShortDateString() + " " + resultTomorrow[i].StartTime.ToShortTimeString();
+                agendaView.End = resultTomorrow[i].EndDate.ToShortDateString() + " " + resultTomorrow[i].EndTime.ToShortTimeString();
+                agendaView.ID = resultTomorrow[i].ID;
+
+                // Add event handler
+                agendaView.MouseLeftButtonUp += new MouseButtonEventHandler(eventview_MouseLeftButtonUp);
+
+                // Set margin
+                agendaView.Margin = new Thickness(0, 0, 0, 10);
+
+                // Add
+                EventViewContainer2.Children.Add(agendaView);
             }
         }
 
@@ -121,7 +156,12 @@ namespace eTime
 
         private void grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Quark.xaml", UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/Quark.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative));
         }
 
         

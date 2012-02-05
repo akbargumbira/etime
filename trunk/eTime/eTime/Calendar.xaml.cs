@@ -16,8 +16,8 @@ namespace eTime
     public partial class Calendar : PhoneApplicationPage
     {
         public static string[] MONTHS = { 
-                                                  "January", "February", "March", "April", "May", "Juni",
-                                                  "July", "August", "September", "October","November", "December"
+                                                  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                                  "Jul", "Aug", "Sep", "Oct","Nov", "Dec"
                                         };
 
         public static string[] DAYS = {

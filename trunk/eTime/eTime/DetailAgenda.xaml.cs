@@ -44,7 +44,7 @@ namespace eTime
 
         private string CreateMessage()
         {
-            string strMessage = "I will " + textBlockTitle.Text + " @ " + textBlockLocation.Text + " from" + textBlockStartTime.Text + " " + textBlockStartDate.Text + " until " + textBlockEndTime.Text + " " + textBlockEndDate.Text;
+            string strMessage = "I will attend " + textBlockTitle.Text + " @ " + textBlockLocation.Text + " from " + textBlockStartTime.Text + " " + textBlockStartDate.Text + " until " + textBlockEndTime.Text + " " + textBlockEndDate.Text;
             return strMessage;
         }
 
@@ -59,7 +59,8 @@ namespace eTime
         {
             if (e.Error != null)
             {
-                UpdateUIStatus("Error posting message", e.Error.Message);
+                //UpdateUIStatus("Error posting message", e.Error.Message);
+                LoginHazard();
                 return;
             }
             try
@@ -69,6 +70,15 @@ namespace eTime
             catch (Exception eX)
             {
                 UpdateUIStatus("Error handling post result", eX.Message);
+            }
+        }
+
+        private void LoginHazard()
+        {
+            MessageBoxResult result = MessageBox.Show("Please log in to your FB account", "Error posting message", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK)
+            {
+                NavigationService.Navigate(new Uri("/Login.xaml?error=1", UriKind.Relative));
             }
         }
 
@@ -97,7 +107,7 @@ namespace eTime
 
         private void btnEdit_Click(object sender, EventArgs e)
         { 
-            NavigationService.Navigate(new Uri("/EditAgenda.xaml?id="+ID, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/EditAgenda.xaml?id="+ID+"&edit=1", UriKind.Relative));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
